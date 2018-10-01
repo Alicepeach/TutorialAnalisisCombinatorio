@@ -1,0 +1,47 @@
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .nav-wrapper {
+    background-color: #850000 !important;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .colorcito2{
+  	color: white;
+  	font-family: 'Assistant', sans-serif;
+  	background: #4B2080;
+  }
+
+  .colorcito1{
+  	font-family: 'Assistant', sans-serif;
+  	background: linear-gradient(#F74B4B, #F7B484);
+  }
+
+  .colorcito3{
+  	font-family: 'Assistant', sans-serif;
+  	background: #E18212;
+  }
+
+  .letraDiseño{
+  	font-family: 'Assistant', sans-serif;
+  	font-size: 25px;
+  	color:#070000;
+  }
+
+  .tamañoEscudo{
+  	height: 120px;
+  	width: 120px;
+  }
+
+  .letraFooter{
+  	color:#4D3404;
+  	font-style: bold;
+  }
