@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Belleza, Tips">
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Assistant:300" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+
+  <div id = "prub"></div>    
+  <div id = 'pregunta1'></div>
+  <div id = 'respuestas1'></div>
+
+  <input type="button" value= "Calificar" onclick="calificacion()">
+
+<script>
+  var correctas = 0;
+
+  function incisos(numeritoAleatorio) {
+    var posibilidades = "";
+    for( var i = 0; i < arregloDeRespuestas[numeritoAleatorio].length; i ++){
+      posibilidades += '<input type="radio" name = "preguntitas'+numeritoAleatorio+'" value= "'+i+'"><label>'+ arregloDeRespuestas[numeritoAleatorio][i] + '</label><br>';
+    }
+    return posibilidades;
+  }
+
+  var arregloDePreguntas = [
+  'Primer pregunta', 'Segunda pregunta', 'Tercer pregunta', 'Cuarta pregunta', 'Quinta pregunta'];
+
+  var arregloDeRespuestas = [
+  ['Respuesta11', 'Respuesta12', 'Respuesta13', 'Respuesta14'],['Respuesta21', 'Respuesta22', 'Respuesta23','Respuesta24'],['Respuesta31', 'Respuesta32', 'Respuesta33','Respuesta34'],['Respuesta41', 'Respuesta42', 'Respuesta43','Respuesta44'],['Respuesta51', 'Respuesta52','Respuesta53','Respuesta54']];
+
+  var arregloDeIncisosRespuestasCorrectas= ['0', '1', '2', '3', '0'];
+  
+  
+  /*Validación de preguntas aleatorias no repetidas*/
+  var cantidadNumeros = arregloDePreguntas.length;
+  var arregloDeAleatorios = []
+  while(arregloDeAleatorios.length < cantidadNumeros ){
+    var numeroAleatorio = Math.floor(Math.random()*cantidadNumeros);
+    var existe = false;
+    for(var i=0;i<arregloDeAleatorios.length;i++){
+      if(arregloDeAleatorios [i] == numeroAleatorio){
+        existe = true;
+        break;
+      }
+    }
+    if(!existe){
+      arregloDeAleatorios[arregloDeAleatorios.length] = numeroAleatorio;
+    }
+
+  }
+
+  document.write("números aleatorios : " + arregloDeAleatorios);
+  var aleatorio1 = 0;
+
+  document.getElementById('pregunta1').innerHTML = arregloDePreguntas[aleatorio1];
+  document.getElementById('respuestas1').innerHTML = incisos(aleatorio1);
+
+  var correctas = 0;
+
+  function calificacion(){
+    var respuesta = $("input[name=preguntitas"+"]:checked").val();
+    if (respuesta == arregloDeIncisosRespuestasCorrectas[0]){
+      correctas++;
+      alert('La respuesta es correcta');
+    }
+  }
+
+</script>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/app.js"></script>
+</html>

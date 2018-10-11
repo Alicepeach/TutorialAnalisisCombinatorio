@@ -17,12 +17,14 @@
   .colorcito2{
   	color: white;
   	font-family: 'Assistant', sans-serif;
-  	background: #4B2080;
+  	background: #0163B7;
   }
 
   .colorcito1{
   	font-family: 'Assistant', sans-serif;
-  	background: linear-gradient(#F74B4B, #F7B484);
+    /*background: #0163B7 ;*/
+    color: #5BCAF3;
+    background:linear-gradient(#0163B7, #602476);
   }
 
   .colorcito3{
@@ -31,9 +33,9 @@
   }
 
   .letraDiseño{
-  	font-family: 'Assistant', sans-serif;
+    color: black;
+    font-family: 'Assistant', sans-serif;
   	font-size: 25px;
-  	color:#070000;
   }
 
   .tamañoEscudo{
@@ -42,6 +44,75 @@
   }
 
   .letraFooter{
-  	color:#4D3404;
-  	font-style: bold;
+  	color:black;
+    font-weight: bold;
+  }
+  .colorLinks{
+    font-style: italic;
+  }
+  .emergenciaJava{
+    color: white;
+    font-family: 'Assistant', sans-serif;
+    font-size: 30px;
+    background: #4B2080;
+  }
+  
+  .subtitulosPeques{
+
+  }
+  
+  .boton-personalizado-2 {
+    color: white;
+    font-family: 'Assistant', sans-serif;
+    font-size: 30px;
+    font-weight:600;
+    font-size:20px;
+    color:#ffffff;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:15px;
+    padding-right:15px;
+    background-color:#4B2080;
+  }
+   
+  /* Este es el estilo al poner el cursor encima del boton*/
+  .boton-personalizado-2:hover {
+  background-color:#6284F3;
+  }
+
+  .fondoEmergencia{
+    background-color: #9EA1E2;
+  }
+
+  .preguntasTitulos{
+    font-size: 23px;
+    font-style: bold;
+    font-family: 'Mali', cursive;
+  }
+
+  .preguntasOpciones{
+    font-size: 20px;
+    font-family: 'Mali', cursive;
+
+  }
+
+  .titulosGenerales{
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .subtitulosGenerales{
+    text-align: left;
+    font-size: 32px;
+  }
+
+  .parrafos{
+    text-align: justify;
+    font-size: 20px;
+  }
+
+  .citas{
+    text-align: justify;
+    font-size: 15px;
+
   }
